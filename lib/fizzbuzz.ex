@@ -1,12 +1,16 @@
 defmodule Fizzbuzz do
 
-  def play(num) do 
+  def play(num) when is_integer(num) do 
     cond do
-      is_fizzbuzz(num) -> "fizzbuzz"
-      is_fizz(num) -> "fizz"
-      is_buzz(num) -> "buzz"
-      true -> num
+      is_fizzbuzz(num) -> IO.puts "fizzbuzz"
+      is_fizz(num) -> IO.puts "fizz"
+      is_buzz(num) -> IO.puts "buzz"
+      true -> IO.puts num
     end
+  end
+
+  def play(range) when is_map(range) do
+    Enum.map(range, fn(num) -> play(num) end)
   end
 
   defp is_fizz(num) do
