@@ -14,4 +14,7 @@ defmodule FizzbuzzTest do
   test "Outputs 'buzz' if input is divisible by 5 but not 3" do
     assert Fizzbuzz.play(5) == "buzz"
   end
+  test "Outputs 'fizzbuzz' if input is divisible by 3 and 5" do
+    assert Fizzbuzz.play(15) == "fizzbuzz"
+  end
 end
