@@ -21,8 +21,4 @@ defmodule Fizzbuzz do
     is_fizz(num) && is_buzz(num)
   end
 
-  def hello do
-    :world
-  end
-
 end
