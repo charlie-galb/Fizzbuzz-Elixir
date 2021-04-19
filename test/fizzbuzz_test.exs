@@ -6,6 +6,6 @@ defmodule FizzbuzzTest do
     assert Fizzbuzz.hello() == :world
   end
   test "Outputs the number unchanged if not divisible by 3 or five" do
-    assert Fizzbuzz.single(1) == 1
+    assert Fizzbuzz.play(1) == 1
   end
 end
